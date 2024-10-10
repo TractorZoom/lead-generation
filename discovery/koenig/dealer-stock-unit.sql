@@ -1,0 +1,32 @@
+SELECT Anvil__DealerStockNumber__c
+     , Anvil__Description__c
+     , Anvil__Status__c
+     , Anvil__Group__c
+     , Anvil__ModelYear__c
+     , Anvil__EquipmentMake__c
+     , Anvil__EquipmentModel__c
+     , Anvil__SerialNumber__c
+     , Anvil__EquipmentType__c
+     , Anvil__Sub_Group__c
+     , Anvil__Hours_or_Units__c
+     , Anvil__Seperator_Hours__c
+     , Check_in_Date__c
+     , Date_Promised__c
+     , Anvil__Store__c
+     , Anvil__OrderDate__c
+     , Anvil__e189_Traded_By__c
+     , Anvil__PurchaseDate__c
+     , Anvil__Basic_Warranty_Hours__c
+     , Anvil__Basic_Warranty_End_Date__c
+     , Anvil__Extended_Warranty_Hours__c
+     , Anvil__Extended_Warranty_End_Date__c
+     , Anvil__Invoice_Amount__c
+     , Anvil__SalesPrice__c
+     , Anvil__NetSalesPrice__c
+     , Reserve_Amount__c
+     , Anvil__DateReceived__c
+     , Invoice_Number__c
+     , Anvil__SalesDate__c
+     , Anvil__Sold_By__c
+     , Anvil__Account__c
+FROM Anvil__DealerStockUnit__c 
