@@ -1,0 +1,2284 @@
+{
+    "account": {
+        "account_id": {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Id"
+                }
+            ]
+        },
+        "account_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__AccountNumber__c"
+                }
+            ]
+        },
+        "county": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "County__c"
+                }
+            ]
+        },
+        "aor_customer": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__AORCustomer__c"
+                }
+            ]
+        },
+        "primary_store_location": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__PrimaryStoreLocation__c"
+                }
+            ]
+        },
+        "parent_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "ParentId"
+                }
+            ]
+        },
+        "account_owner_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "user",
+            "foreign_key_field": "user_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "OwnerId"
+                }
+            ]
+        },
+        "technology_rep": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__Technology_Rep__c"
+                }
+            ]
+        },
+        "customer_segment": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__Customer_Type__c"
+                }
+            ]
+        },
+        "type_of_equipment": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Equipment__c"
+                }
+            ]
+        },
+        "customer_loyalty": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__Competitive_Owner__c"
+                }
+            ]
+        },
+        "call_frequency": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__CallFrequency__c"
+                }
+            ]
+        },
+        "call_status": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__Call_Status__c"
+                }
+            ]
+        },
+        "customer_business_class": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__Trade_Type__c"
+                }
+            ]
+        },
+        "ktrt_call_status": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "KTRT_Call_Status__c"
+                }
+            ]
+        },
+        "turf_only": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Turf_Only__c"
+                }
+            ]
+        },
+        "engagement_level": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "Anvil__Engagement_Level__c"
+                }
+            ]
+        },
+        "billing_postal_code": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Account",
+                    "api_name": "BillingPostalCode"
+                }
+            ]
+        }
+    },
+    "clg_profile": {
+        "clg_id": {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__Unique_Id__c"
+                }
+            ]
+        },
+        "clg_owner_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "user",
+            "foreign_key_field": "user_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "OwnerId"
+                }
+            ]
+        },
+        "clg_profile_status": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "CLG_Profile_Status__c"
+                }
+            ]
+        },
+        "account_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": "account",
+            "foreign_key_field": "account_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__Account__c"
+                }
+            ]
+        },
+        "clg_profile_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "definition": "Not guaranteed to be unique, the CLG profile account_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__ent_id__c"
+                }
+            ]
+        },
+        "clg_description": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__Ag_Sel_Sic_Dsc__c"
+                }
+            ]
+        },
+        "clg_county": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__py_county_nm__c"
+                }
+            ]
+        },
+        "clg_postal_code": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__Address__PostalCode__s"
+                }
+            ]
+        },
+        "clg_state": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Profile2__c",
+                    "api_name": "Anvil__Address__StateCode__s"
+                }
+            ]
+        }
+    },
+    "clg_sales_lead": {
+        "clg_sales_lead_id" : {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Id"
+                }
+            ]
+        },
+        "clg_profile_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "clg_profile",
+            "foreign_key_field": "clg_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__CLG_Profile__c"
+                }
+            ]
+        },
+        "clg_product_category_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__clg_cmptv_product_id__c"
+                }
+            ]
+        },
+        "clg_product_category_defintion": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__clg_cmptv_product_category__c"
+                }
+            ]
+        },
+        "clg_agricultural_selection_description": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Agricultural_Selection_Description__c"
+                }
+            ]
+        },
+        "clg_jd_percent_category": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__jd_pctg_category__c"
+                }
+            ]
+        },
+        "clg_used_pctg_category": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__used_pctg_category__c"
+                }
+            ]
+        },
+        "clg_prob_to_finance": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__buyer_prbly_to_fnce__c"
+                }
+            ]
+        },
+        "clg_prob_to_finance_jd": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__buyer_prbly_to_fnce_deere__c"
+                }
+            ]
+        },
+        "clg_prob_next_purchase_jd": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__purchs_deere_next_prbly__c"
+                }
+            ]
+        },
+        "clg_prob_purchase": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__CLG_Sales_Lead__c",
+                    "api_name": "Anvil__purchs_prbly__c"
+                }
+            ]
+        }
+    },
+    "customer_equipment": {
+        "customer_equipment_id": {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Id"
+                }
+            ]
+        },
+        "dealer_stock_number": {
+            "primary_key": null,
+            "foreign_key": false,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Dealer_Stock_Number__c"
+                }
+            ]
+        },
+        "dealer_stock_unit": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "dealer_stock_unit",
+            "foreign_key_field": "stock_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Dealer_Stock_Unit__c"
+                }
+            ]
+        },
+        "model_year": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Model_Year__c"
+                }
+            ]
+        },
+        "ce_make": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Make__c"
+                }
+            ]
+        },
+        "ce_model": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Model__c"
+                }
+            ]
+        },
+        "ce_serial_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Serial_Number__c"
+                }
+            ]
+        },
+        "ce_status": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "description": "Either owned, sold, traded, or scrapped",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Status__c"
+                }
+            ]
+        },
+        "ce_category": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Group__c"
+                }
+            ]
+        },
+        "ce_hours": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Hours_Of_Use__c"
+                }
+            ]
+        },
+        "ce_hours_date_updated": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Hours_Updated_Date__c"
+                }
+            ]
+        },
+        "ce_sale_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Sales_Date__c"
+                }
+            ]
+        },
+        "account_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "account",
+            "foreign_key_field": "account_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Account__c"
+                }
+            ]
+        },
+        "ce_invoice_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Sales_Invoice__c"
+                }
+            ]
+        },
+        "ce_sale_amount": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Sales_Amount__c"
+                }
+            ]
+        },
+        "ce_last_service_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__e_LastServiceDate__c"
+                }
+            ]
+        },
+        "ce_days_owned": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Days_Owned__c"
+                }
+            ]
+        }
+    },
+    "dealer_stock_unit": {
+        "dealer_stock_unit_id" : {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Id"
+                }
+            ]
+        },
+        "dealer_stock_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__DealerStockNumber__c"
+                }
+            ]
+        },
+        "sdu_description": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Description__c"
+                }
+            ]
+        },
+        "sdu_status": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Status__c"
+                }
+            ]
+        },
+        "sdu_group": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Group__c"
+                }
+            ]
+        },
+        "sdu_model_year": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__ModelYear__c"
+                }
+            ]
+        },
+        "sdu_make": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__EquipmentMake__c"
+                }
+            ]
+        },
+        "sdu_model": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__EquipmentModel__c"
+                }
+            ]
+        },
+        "sdu_serial_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__SerialNumber__c"
+                }
+            ]
+        },
+        "sdu_new_used": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__EquipmentType__c"
+                }
+            ]
+        },
+        "sdu_sub_group": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Sub_Group__c"
+                }
+            ]
+        },
+        "sdu_hours_or_units": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Hours_or_Units__c"
+                }
+            ]
+        },
+        "sdu_seperator_hours": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Seperator_Hours__c"
+                }
+            ]
+        },
+        "sdu_check_in_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Check_in_Date__c"
+                }
+            ]
+        },
+        "sdu_date_promised": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Date_Promised__c"
+                }
+            ]
+        },
+        "sdu_store": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Store__c"
+                }
+            ]
+        },
+        "sdu_order_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__OrderDate__c"
+                }
+            ]
+        },
+        "sdu_user_traded_by": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "user",
+            "foreign_key_field": "user_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__e189_Traded_By__c"
+                }
+            ]
+        },
+        "sdu_purchase_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__PurchaseDate__c"
+                }
+            ]
+        },
+        "sdu_basic_warranty_hours": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Basic_Warranty_Hours__c"
+                }
+            ]
+        },
+        "sdu_basic_warranty_end_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Basic_Warranty_End_Date__c"
+                }
+            ]
+        },
+        "sdu_extended_warranty_hours": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Extended_Warranty_Hours__c"
+                }
+            ]
+        },
+        "sdu_extended_warranty_end_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Extended_Warranty_End_Date__c"
+                }
+            ]
+        },
+        "sdu_invoice_amount": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Invoice_Amount__c"
+                }
+            ]
+        },
+        "sdu_sale_price": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__SalesPrice__c"
+                }
+            ]
+        },
+        "sdu_net_sales_price": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__NetSalesPrice__c"
+                }
+            ]
+        },
+        "sdu_reserve_amount": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Reserve_Amount__c"
+                }
+            ]
+        },
+        "sdu_date_received": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__DateReceived__c"
+                }
+            ]
+        },
+        "sdu_invoice_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Invoice_Number__c"
+                }
+            ]
+        },
+        "sdu_sales_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__SalesDate__c"
+                }
+            ]
+        },
+        "sdu_sold_by": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "user",
+            "foreign_key_field": "user_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Sold_By__c"
+                }
+            ]
+        },
+        "sdu_account_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "account",
+            "foreign_key_field": "account_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Account__c"
+                }
+            ]
+        }
+    },
+    "eda_buyer": {
+        "eda_buyer_id": {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Id"
+                }
+            ]
+        },
+        "account_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "account",
+            "foreign_key_field": "account_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__Account__c"
+                }
+            ]
+        },
+        "eda_buyer_anvil_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__Buyer_ID__c"
+                }
+            ]
+        },
+        "eda_buyer_county": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__County__c"
+                }
+            ]
+        },
+        "eda_buyer_state": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__State__c"
+                }
+            ]
+        },
+        "eda_buyer_zip": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__Zip__c"
+                }
+            ]
+        },
+        "eda_buyer_fips": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__FIPS__c"
+                }
+            ]
+        },
+        "eda_buyer_duns_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__DUNS_Number__c"
+                }
+            ]
+        },
+        "eda_buyer_sic": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__SIC__c"
+                }
+            ]
+        },
+        "eda_buyer_sic_description": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "Anvil__SIC_Description__c"
+                }
+            ]
+        },
+        "eda_buyer_owner_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "user",
+            "foreign_key_field": "user_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Buyer__c",
+                    "api_name": "OwnerId"
+                }
+            ]
+        }
+    },
+    "eda_equipment": {
+        "eda_equipment_id": {
+            "primary_key": true,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Id"
+                }
+            ]
+        },
+        "account_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "account",
+            "foreign_key_field": "account_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Account__c"
+                }
+            ]
+        },
+        "eda_buyer_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "eda_buyer",
+            "foreign_key_field": "eda_buyer_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__EDA_Buyer__c"
+                }
+            ]
+        },
+        "eda_customer_equipment_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "customer_equipment",
+            "foreign_key_field": "customer_equipment_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Customer_Equipment__c"
+                }
+            ]
+        },
+        "eda_date_of_last_activity": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Date_of_Last_Activity__c"
+                }
+            ]
+        },
+        "eda_ucc_file_date": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__UCC_Date__c"
+                }
+            ]
+        },
+        "eda_ucc_batch": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__UCC_Batch__c"
+                }
+            ]
+        },
+        "eda_ucc_id": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__UCC_ID__c"
+                }
+            ]
+        },
+        "eda_ucc_status": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__UCCStatus__c"
+                }
+            ]
+        },
+        "eda_dealer_stock_unit_id": {
+            "primary_key": null,
+            "foreign_key": true,
+            "foreign_key_object": "dealer_stock_unit",
+            "foreign_key_field": "dealer_stock_unit_id",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Dealer_Stock_Unit__c"
+                }
+            ]
+        },
+        "eda_make": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Make__c"
+                }
+            ]
+        },
+        "eda_model": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Model__c"
+                }
+            ]
+        },
+        "eda_description": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Description__c"
+                }
+            ]
+        },
+        "eda_equipment_quantity": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Equipment_Quantity__c"
+                }
+            ]
+        },
+        "eda_model_year": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Model_Year__c"
+                }
+            ]
+        },
+        "eda_new_used": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__NU__c"
+                }
+            ]
+        },
+        "eda_serial_number": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Serial_Number__c"
+                }
+            ]
+        },
+        "eda_value": {
+            "primary_key": null,
+            "foreign_key": null,
+            "foreign_key_object": null,
+            "foreign_key_field": null,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__EDA_Equipment__c",
+                    "api_name": "Anvil__Value__c"
+                }
+            ]
+        }
+    },
+    "service_requests" : {
+        "service_order_id": {
+            "primary_key": true,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        }, 
+        "service_order_number": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Anvil__Invoice_Number__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__WorkOrderNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_customer_equipment_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__Customer_Equipment__c",
+                    "foreign_key_object": "customer_equipment",
+                    "foreign_key_field": "customer_equipment_id",
+                }
+            ]
+        }, 
+        "service_dealer_stock_unit_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Anvil__DealerStockUnit__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_unit_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__DealerStockUnit__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_unit_id"
+                }
+            ]
+        }, 
+        "service_progress_status": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Progress_Status__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }, 
+        "service_account_id": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Anvil__Account__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_number"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__Account__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                }
+            ]
+        },
+        "service_open_date": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Open_Date__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }, 
+        "service_close_date": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Anvil__Billing_Date__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Close_Date__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_make": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Make__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }, 
+        "service_model": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Anvil__e_Model__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_serial_number": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__MachineSerialNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_invoice_value": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Equipment_History__c",
+                    "api_name": "Anvil__Amount__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Service_Value__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_branch": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__Branch__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__Branch__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }
+    },
+    "task" : {
+        "task_id": {
+            "primary_key": true,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "task_account_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "AccountId",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "AccountId",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                }
+            ]
+        },
+        "task_owner_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "OwnerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "OwnerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+            ]
+        },
+        "task_created_date": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "CreatedDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "CreatedDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_activity_date": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "ActivityDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "ActivityDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_overdue_flag": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "Anvil__Overdue__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "Anvil__Overdue__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_type": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "Anvil__Activity_Type__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "Anvil__Activity_Type__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_call_type": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "CallType",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "CallType",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_subtype": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "TaskSubtype",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "TaskSubtype",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_subject": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "Subject",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "Subject",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_status": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "Status",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "Status",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "task_priority": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Task",
+                    "api_name": "Priority",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Task",
+                    "api_name": "Priority",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }
+    },
+    "user" : {
+        "user_id": {
+            "primary_key": true,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "Anvil__User_ID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "Anvil__User_ID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "user_branch_location": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "Anvil__Branch_Location__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "Anvil__Branch_Location__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "user_primary_store_location_id": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "Anvil__PrimaryStoreLocationID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "Anvil__PrimaryStoreLocationID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "user_manager": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "ManagerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "ManagerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+                
+            ]
+        },
+        "user_region_manager": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "Anvil__Region_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "Anvil__Region_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+                
+            ]
+        },
+        "user_sales_manager": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "Anvil__Sales_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "Anvil__Sales_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+                
+            ]
+        },
+        "user_title": {
+            "primary_key": false,
+            "foreign_key": true,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "User",
+                    "api_name": "Title",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "User",
+                    "api_name": "Title",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        }
+    },
+    "store" : {
+        "store_id": {
+            "primary_key": true,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "store_branch": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__Branch__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__Branch__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "store_county": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__County_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__County_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+                
+            ]
+        },
+        "store_postal_code": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__Postal_Code__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__Postal_Code__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "store_state": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__State_Province_Code__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__State_Province_Code__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "store_city": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__City_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__City_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "store_country": {
+            "primary_key": false,
+            "foreign_key": false,
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__Country_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Store__c",
+                    "api_name": "Anvil__Country_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }
+    }
+}
