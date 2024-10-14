@@ -12,7 +12,6 @@ SELECT  Id
       , Anvil__CallFrequency__c
       , Anvil__Call_Status__c
       , Anvil__Trade_Type__c
-      , Turf_Only__c
       , Anvil__Engagement_Level__c
       , BillingPostalCode
 FROM Account 

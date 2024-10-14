@@ -1,5 +1,4 @@
 SELECT Id
-     , Name
      , Anvil__Account__c
      , Anvil__QuoteId__c
      , Anvil__Status__c
