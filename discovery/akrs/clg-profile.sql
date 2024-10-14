@@ -1,0 +1,9 @@
+SELECT Anvil__Unique_Id__c
+     , OwnerId
+     , Anvil__Account__c
+     , Anvil__ent_id__c	
+     , Anvil__Ag_Sel_Sic_Dsc__c
+     , Anvil__py_county_nm__c
+     , Anvil__Address__PostalCode__s
+     , Anvil__Address__StateCode__s
+FROM Anvil__CLG_Profile2__c

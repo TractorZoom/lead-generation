@@ -1,0 +1,20 @@
+SELECT Id
+     , Anvil__Account__c
+     , Anvil__EDA_Buyer__c
+     , Anvil__Customer_Equipment__c
+     , Anvil__Date_of_Last_Activity__c
+     , Anvil__UCC_Date__c
+     , Anvil__UCC_Batch__c
+     , Anvil__UCC_ID__c
+     , Anvil__UCCStatus__c
+     , Anvil__UCC_Status__c
+     , Anvil__Dealer_Stock_Unit__c
+     , Anvil__Make__c
+     , Anvil__Model__c
+     , Anvil__Description__c
+     , Anvil__Equipment_Quantity__c
+     , Anvil__Model_Year__c
+     , Anvil__NU__c
+     , Anvil__Serial_Number__c
+     , Anvil__Value__c
+FROM Anvil__EDA_Equipment__c  

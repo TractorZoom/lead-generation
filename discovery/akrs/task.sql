@@ -1,0 +1,13 @@
+SELECT Id
+     , AccountId
+     , OwnerId
+     , CreatedDate
+     , ActivityDate
+     , Anvil__Overdue__c
+     , Anvil__Activity_Type__c
+     , CallType
+     , TaskSubtype
+     , Subject
+     , Status
+     , Priority
+FROM Task 
