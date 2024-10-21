@@ -1,0 +1,11 @@
+SELECT Id
+     , AccountId
+     , OwnerId
+     , CreatedDate
+     , ActivityDate
+     , DB_Activity_Type__c
+     , TaskSubtype
+     , Subject
+     , Status
+     , Priority
+FROM Task 
