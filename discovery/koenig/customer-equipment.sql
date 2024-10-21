@@ -1,4 +1,5 @@
-SELECT Anvil__Dealer_Stock_Number__c
+SELECT Id
+     , Anvil__Dealer_Stock_Number__c
      , Anvil__Dealer_Stock_Unit__c
      , Anvil__Model_Year__c
      , Anvil__Make__c
