@@ -1,0 +1,18 @@
+SELECT Id
+     , Anvil__Dealer_Stock_Number__c
+     , Anvil__Dealer_Stock_Unit__c
+     , Anvil__e_Franchise__c
+     , Anvil__Model_Year__c
+     , Anvil__Make__c
+     , Anvil__Model__c
+     , Anvil__Serial_Number__c
+     , Anvil__Status__c
+     , Anvil__Group__c
+     , Anvil__Hour_Meter_Reading__c
+     , Anvil__Hours_Updated_Date__c
+     , Anvil__Sales_Date__c
+     , Anvil__Account__c
+     , Anvil__Sales_Invoice__c
+     , Anvil__Sales_Amount__c
+     , Anvil__e_LastServiceDate__c
+FROM Anvil__Customer_Equipment__c 
