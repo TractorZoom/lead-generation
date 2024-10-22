@@ -1,0 +1,21 @@
+{
+  "python.pythonPath": "venv/bin/python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.fixAll": [
+    "source.unusedImports",
+    "source.convertImportFormat"
+  ],
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "yaml.schemas": {
+    "https://json-schema.org/draft/2020-12/schema": [
+      "model/data_model/cotton_pickers.json"
+    ]
+  },
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}
