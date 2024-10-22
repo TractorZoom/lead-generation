@@ -8,6 +8,7 @@ SELECT Id
      , CallType
      , TaskSubtype
      , Subject
+     , Description
      , Status
      , Priority
 FROM Task 

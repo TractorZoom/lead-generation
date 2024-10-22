@@ -5,7 +5,7 @@ SELECT Id
      , ActivityDate
      , DB_Activity_Type__c
      , TaskSubtype
-     , Subject
+     , Description
      , Status
      , Priority
 FROM Task 
