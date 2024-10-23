@@ -1,3 +1,5 @@
 pytest
 polars
 python-dotenv
+ruff
+pyarrow
