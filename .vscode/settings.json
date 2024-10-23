@@ -5,14 +5,13 @@
     "source.unusedImports",
     "source.convertImportFormat"
   ],
+  "editor.formatOnSaveMode": "file",
   "jupyter.notebookFileRoot": "${workspaceFolder}",
-  "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
-  "yaml.schemas": {
-    "https://json-schema.org/draft/2020-12/schema": [
-      "model/data_model/cotton_pickers.json"
-    ]
-  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.ruffEnabled": true,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
   "python.testing.pytestArgs": [
     "tests"
   ],
