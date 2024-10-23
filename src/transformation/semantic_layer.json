@@ -3,6 +3,7 @@
         "account_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -37,6 +38,7 @@
         "account_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -71,6 +73,7 @@
         "county": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -105,6 +108,7 @@
         "aor_customer": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -118,6 +122,7 @@
         "primary_store_location": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -131,6 +136,7 @@
         "parent_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -165,6 +171,7 @@
         "account_owner_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -199,6 +206,7 @@
         "technology_rep": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -212,6 +220,7 @@
         "customer_segment": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -225,6 +234,7 @@
         "type_of_equipment": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -238,6 +248,7 @@
         "customer_loyalty": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -251,6 +262,7 @@
         "call_frequency": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -285,6 +297,7 @@
         "call_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -319,6 +332,7 @@
         "customer_business_class": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -353,6 +367,7 @@
         "engagement_level": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -387,6 +402,7 @@
         "billing_postal_code": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -423,6 +439,7 @@
         "clg_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -450,6 +467,7 @@
         "clg_owner_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -477,6 +495,7 @@
         "clg_profile_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -490,6 +509,7 @@
         "account_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -517,6 +537,7 @@
         "clg_profile_id": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "definition": "Not guaranteed to be unique, the CLG profile account_id",
             "keys": [
                 {
@@ -545,6 +566,7 @@
         "clg_sic_description": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -572,6 +594,7 @@
         "clg_county": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -599,6 +622,7 @@
         "clg_postal_code": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -626,6 +650,7 @@
         "clg_state": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -655,6 +680,7 @@
         "clg_sales_lead_id" : {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -682,6 +708,7 @@
         "clg_profile_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -709,6 +736,7 @@
         "clg_product_category_defintion": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -736,6 +764,7 @@
         "clg_agricultural_selection_description": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -749,6 +778,7 @@
         "clg_jd_percent_category": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -776,6 +806,7 @@
         "clg_used_pctg_category": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -803,6 +834,7 @@
         "clg_prob_to_finance": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -830,6 +862,7 @@
         "clg_prob_to_finance_jd": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -857,6 +890,7 @@
         "clg_prob_next_purchase_jd": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -884,6 +918,7 @@
         "clg_prob_purchase": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -913,6 +948,7 @@
         "customer_equipment_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -947,6 +983,7 @@
         "dealer_stock_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -981,6 +1018,7 @@
         "dealer_stock_unit": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1015,6 +1053,7 @@
         "ce_model_year": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1049,6 +1088,7 @@
         "ce_make": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1083,6 +1123,7 @@
         "ce_model": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1117,6 +1158,7 @@
         "ce_serial_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1151,6 +1193,7 @@
         "ce_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "description": "Either owned, sold, traded, or scrapped",
             "keys": [
                 {
@@ -1186,6 +1229,7 @@
         "ce_category": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1220,6 +1264,7 @@
         "ce_hours": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -1254,6 +1299,7 @@
         "ce_hours_date_updated": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -1288,6 +1334,7 @@
         "ce_purchased_new_used" : {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "akrs",
@@ -1301,6 +1348,7 @@
         "ce_sale_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -1335,6 +1383,7 @@
         "account_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1369,6 +1418,7 @@
         "ce_invoice_id": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1403,6 +1453,7 @@
         "ce_sale_amount": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -1437,6 +1488,7 @@
         "ce_last_service_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -1471,6 +1523,7 @@
         "ce_days_owned": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "integer",
             "keys": [
                 {
                     "org": "koenig",
@@ -1493,6 +1546,7 @@
         "dealer_stock_unit_id" : {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1527,6 +1581,7 @@
         "dealer_stock_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1561,6 +1616,7 @@
         "dsu_description": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1581,6 +1637,7 @@
         "dsu_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1615,6 +1672,7 @@
         "dsu_group": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1635,6 +1693,7 @@
         "dsu_model_year": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "integer",
             "keys": [
                 {
                     "org": "koenig",
@@ -1662,6 +1721,7 @@
         "dsu_make": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1696,6 +1756,7 @@
         "dsu_model": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1730,6 +1791,7 @@
         "dsu_serial_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1764,6 +1826,7 @@
         "dsu_new_used": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1798,6 +1861,7 @@
         "dsu_sub_group": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1818,6 +1882,7 @@
         "dsu_marketshare_product_family" : {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "ave-plp",
@@ -1831,6 +1896,7 @@
         "dsu_hours_or_units": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -1865,6 +1931,7 @@
         "dsu_seperator_hours": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -1885,6 +1952,7 @@
         "dsu_check_in_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -1905,6 +1973,7 @@
         "dsu_date_promised": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -1925,6 +1994,7 @@
         "dsu_store": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -1959,6 +2029,7 @@
         "dsu_order_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -1993,6 +2064,7 @@
         "dsu_user_traded_by": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2027,6 +2099,7 @@
         "dsu_purchase_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2061,6 +2134,7 @@
         "dsu_basic_warranty_hours": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2081,6 +2155,7 @@
         "dsu_basic_warranty_end_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2101,6 +2176,7 @@
         "dsu_extended_warranty_hours": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2121,6 +2197,7 @@
         "dsu_extended_warranty_end_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2141,6 +2218,7 @@
         "dsu_invoice_amount": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2175,6 +2253,7 @@
         "dsu_sale_price": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2209,6 +2288,7 @@
         "dsu_net_sales_price": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2243,6 +2323,7 @@
         "dsu_reserve_amount": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2256,6 +2337,7 @@
         "dsu_date_received": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2290,6 +2372,7 @@
         "dsu_invoice_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2324,6 +2407,7 @@
         "dsu_sales_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2358,6 +2442,7 @@
         "dsu_sold_by": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2392,6 +2477,7 @@
         "dsu_account_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2428,7 +2514,7 @@
         "eda_buyer_id": {
             "primary_key": true,
             "foreign_key": false,
-
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2442,6 +2528,7 @@
         "account_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2455,6 +2542,7 @@
         "eda_buyer_anvil_id": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2468,6 +2556,7 @@
         "eda_buyer_county": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2481,6 +2570,7 @@
         "eda_buyer_state": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2494,6 +2584,7 @@
         "eda_buyer_zip": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2507,6 +2598,7 @@
         "eda_buyer_fips": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2520,6 +2612,7 @@
         "eda_buyer_duns_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "integer",
             "keys": [
                 {
                     "org": "koenig",
@@ -2533,6 +2626,7 @@
         "eda_buyer_sic": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2546,6 +2640,7 @@
         "eda_buyer_sic_description": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2559,6 +2654,7 @@
         "eda_buyer_owner_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2574,6 +2670,7 @@
         "eda_equipment_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2587,6 +2684,7 @@
         "account_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2600,6 +2698,7 @@
         "eda_buyer_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2613,6 +2712,7 @@
         "eda_customer_equipment_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2626,6 +2726,7 @@
         "eda_date_of_last_activity": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2639,6 +2740,7 @@
         "eda_ucc_file_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -2652,6 +2754,7 @@
         "eda_ucc_batch": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2665,6 +2768,7 @@
         "eda_ucc_id": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2678,6 +2782,7 @@
         "eda_ucc_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2691,6 +2796,7 @@
         "eda_dealer_stock_unit_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2704,6 +2810,7 @@
         "eda_make": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2717,6 +2824,7 @@
         "eda_model": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2730,6 +2838,7 @@
         "eda_description": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2743,6 +2852,7 @@
         "eda_equipment_quantity": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "integer",
             "keys": [
                 {
                     "org": "koenig",
@@ -2756,6 +2866,7 @@
         "eda_model_year": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "integer",
             "keys": [
                 {
                     "org": "koenig",
@@ -2769,6 +2880,7 @@
         "eda_new_used": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2782,6 +2894,7 @@
         "eda_serial_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2795,6 +2908,7 @@
         "eda_value": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -2810,6 +2924,7 @@
         "service_order_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2844,6 +2959,7 @@
         "service_order_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2878,6 +2994,7 @@
         "service_customer_equipment_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "akrs",
@@ -2905,6 +3022,7 @@
         "service_dealer_stock_unit_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -2939,6 +3057,7 @@
         "service_progress_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "akrs",
@@ -2966,6 +3085,7 @@
         "service_account_id": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3000,6 +3120,7 @@
         "service_open_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "akrs",
@@ -3027,6 +3148,7 @@
         "service_close_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
@@ -3061,6 +3183,7 @@
         "service_make": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "akrs",
@@ -3088,6 +3211,7 @@
         "service_model": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "akrs",
@@ -3122,6 +3246,7 @@
         "service_serial_number": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "akrs",
@@ -3149,6 +3274,7 @@
         "service_invoice_value": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "float",
             "keys": [
                 {
                     "org": "koenig",
@@ -3183,6 +3309,7 @@
         "service_branch": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3219,6 +3346,7 @@
         "task_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3253,6 +3381,7 @@
         "task_account_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3287,6 +3416,7 @@
         "task_owner_id": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3321,6 +3451,7 @@
         "task_created_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "datetime",
             "keys": [
                 {
                     "org": "koenig",
@@ -3355,6 +3486,7 @@
         "task_activity_date": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "datetime",
             "keys": [
                 {
                     "org": "koenig",
@@ -3389,6 +3521,7 @@
         "task_overdue_flag": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "boolean",
             "keys": [
                 {
                     "org": "koenig",
@@ -3423,6 +3556,7 @@
         "task_type": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3457,6 +3591,7 @@
         "task_call_type": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3484,6 +3619,7 @@
         "task_subtype": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3518,6 +3654,7 @@
         "task_subject": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3552,6 +3689,7 @@
         "task_description" : {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3586,6 +3724,7 @@
         "task_status": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3620,6 +3759,7 @@
         "task_priority": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3656,6 +3796,7 @@
         "user_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3690,6 +3831,7 @@
         "user_branch_location": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3724,6 +3866,7 @@
         "user_primary_store_location_id": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3758,6 +3901,7 @@
         "user_manager": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3792,6 +3936,7 @@
         "user_region_manager": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3826,6 +3971,7 @@
         "user_sales_manager": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3860,6 +4006,7 @@
         "user_title": {
             "primary_key": false,
             "foreign_key": true,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3896,6 +4043,7 @@
         "store_id": {
             "primary_key": true,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3930,6 +4078,7 @@
         "store_branch": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3964,6 +4113,7 @@
         "store_county": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -3999,6 +4149,7 @@
         "store_postal_code": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -4033,6 +4184,7 @@
         "store_state": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -4067,6 +4219,7 @@
         "store_city": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
@@ -4101,6 +4254,7 @@
         "store_country": {
             "primary_key": false,
             "foreign_key": false,
+            "type": "string",
             "keys": [
                 {
                     "org": "koenig",
