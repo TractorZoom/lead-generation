@@ -10,4 +10,5 @@ SELECT Id
      , Description
      , Status
      , Priority
+     , CallType
 FROM Task 
