@@ -3,7 +3,9 @@ SELECT Id
      , OwnerId
      , CreatedDate
      , ActivityDate
-     , DB_Activity_Type__c
+     , CallObject
+     , Subject
+     , CallDisposition
      , TaskSubtype
      , Description
      , Status
