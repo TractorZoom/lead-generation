@@ -1,5 +1,5 @@
 SELECT Id
-     , Anvil__DealerStockUni__c
+     , Anvil__DealerStockUnit__c
      , Anvil__Invoice_Number__c
      , Anvil__Account_Number__c	
      , Anvil__Billing_Date__c

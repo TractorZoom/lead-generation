@@ -3090,7 +3090,7 @@
                 {
                     "org": "koenig",
                     "object": "Anvil__Equipment_History__c",
-                    "api_name": "Anvil__Account__c",
+                    "api_name": "Anvil__Account_Number__c",
                     "foreign_key_object": "account",
                     "foreign_key_field": "account_number"
                 },
@@ -3266,6 +3266,62 @@
                     "org": "greenway",
                     "object": "Anvil__ServiceWorkOrder__c",
                     "api_name": "Anvil__MachineSerialNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_invoice_parts_value" : {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "float",
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Part_Value__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Part_Value__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Part_Value__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "service_invoice_labor_value" : {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "float",
+            "keys": [
+                {
+                    "org": "akrs",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Labor_Value__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Labor_Value__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__ServiceWorkOrder__c",
+                    "api_name": "Anvil__e_Invoice_Labor_Value__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
                 }
@@ -4286,5 +4342,252 @@
                 }
             ]
         }
+    },
+    "purchase_order": {
+         "purchase_order_id": {
+            "primary_key": true,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+         "po_account_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Account__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Account__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Account__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Account__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                }
+            ]
+        }, 
+         "po_quote_id": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "integer",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__QuoteId__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__QuoteId__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__QuoteId__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__QuoteId__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+         "po_dealer_stock_unit_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_unit_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_unit_id"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_unit_id"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_unit_id"
+                }
+            ]
+        },
+         "po_status": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+         "po_market_use": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__marketUse__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__marketUse__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__marketUse__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__marketUse__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }, 
+         "po_transaction_type": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__transactionType__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__transactionType__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__transactionType__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__transactionType__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        } 
     }
 }
