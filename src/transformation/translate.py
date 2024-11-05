@@ -7,7 +7,7 @@ import polars as pl
 
 
 def translate_csv_to_common_model(
-    csv_path: str, dealer: str, semantic_layer_path: str
+    csv_path: str, dealer: str, semantic_layer_path: str, object_type: str
 ) -> pl.DataFrame:
     """Translate a raw CSV for a given dealer into a common data model using semantic layer.
 
@@ -27,27 +27,28 @@ def translate_csv_to_common_model(
 
     """
     # Load the raw CSV data into a Polars DataFrame
-    df_translate = pl.read_csv(csv_path)
+    df_init = pl.read_csv(csv_path, ignore_errors=True)
 
     # Load the semantic layer JSON
     with Path(semantic_layer_path).open(encoding="utf-8") as f:
         semantic_layer = json.load(f)
+    semantic_layer = semantic_layer[object_type]
 
     # Create a dictionary to store the mapping of raw columns to common model columns
     column_mapping = {}
-
-    for fields in semantic_layer.values():
-        for field_name, field_data in fields.items():
-            for key_mapping in field_data["keys"]:
-                if key_mapping["org"] == dealer:
-                    raw_column_name = key_mapping["api_name"]
-                    column_mapping[raw_column_name] = field_name
+    column_types = {}
+    for field_name, field_data in semantic_layer.items():
+        for key_mapping in field_data["keys"]:
+            if key_mapping["org"] == dealer:
+                raw_column_name = key_mapping["api_name"]
+                column_mapping[raw_column_name] = field_name
+                if "type" in field_data:
+                    column_types[field_name] = field_data["type"]
 
     # Check for columns in the raw CSV that can be translated using the semantic layer
+
     common_model_columns = [
-        (col, column_mapping[col])
-        for col in df_translate.columns
-        if col in column_mapping
+        (col, column_mapping[col]) for col in df_init.columns if col in column_mapping
     ]
 
     # If no columns were matched, raise an error
@@ -58,7 +59,49 @@ def translate_csv_to_common_model(
         raise ValueError(error_message)
 
     # Rename the columns in the DataFrame according to the semantic layer mapping
-    return df_translate.rename(dict(common_model_columns))
+    df_translate = df_init.rename(dict(common_model_columns))
+
+    for col, data_type in column_types.items():
+        if data_type == "date":
+            df_translate = df_translate.with_columns(
+                pl.col(col)
+                .replace("", None)
+                .str.to_date(format="%Y-%m-%d", strict=False)
+            )
+        elif data_type == "datetime":
+            df_translate = df_translate.with_columns(
+                pl.col(
+                    col.replace("", None).str.to_date(
+                        format="%Y-%m-%d %H:%M:%S", strict=False
+                    )
+                )
+            )
+        elif data_type == "float":
+            if df_translate[col].dtype == pl.Float64:
+                continue
+            df_translate = df_translate.with_columns(
+                pl.col(col).replace("", None).cast(pl.Float64)
+            )
+        elif data_type == "integer":
+            if df_translate[col].dtype == pl.Int64:
+                continue
+            else:
+                df_translate = df_translate.with_columns(
+                    pl.col(col).replace("", None).cast(pl.Int64)
+                )
+        elif data_type == "boolean":
+            df_translate = df_translate.with_columns(
+                pl.col(col).replace("", None).cast(pl.Boolean)
+            )
+        elif data_type == "string":
+            if df_translate[col].dtype != pl.Utf8:
+                df_translate = df_translate.with_columns(pl.col(col).cast(pl.Utf8))
+
+            df_translate = df_translate.with_columns(pl.col(col).replace("", None))
+        else:
+            continue
+
+    return df_translate
 
 
 def translate_koenig_account_columns(df: pl.DataFrame) -> pl.DataFrame:
@@ -158,20 +201,124 @@ def translate_koenig_stock_unit(df: pl.DataFrame) -> pl.DataFrame:
         "X": "X",
     }
 
-    updated_df = df.with_columns(
-        pl.col("dsu_status").replace(stock_unit_translate_dict)
-    )
+    return df.with_columns(pl.col("dsu_status").replace(stock_unit_translate_dict))
 
-    date_cols = [
-        "dsu_check_in_date",
-        "dsu_date_promised",
-        "dsu_order_date",
-        "dsu_purchase_date",
-        "dsu_basic_warranty_end_date",
-        "dsu_extended_warranty_end_date",
-        "dsu_sales_date",
-    ]
-    # update datetime columns to datetime type
-    return updated_df.with_columns(
-        **{col: pl.col(col).str.to_date(format="%Y-%m-%d") for col in date_cols}
-    )
+
+def translate_keonig_customer_equipment(df: pl.DataFrame) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model for Koenig.
+
+    Parameters
+    ----------
+    df : pl.DataFrame
+        The Polars DataFrame to translate.
+
+
+    Returns
+    -------
+    pl.DataFrame
+        Translated Polars DataFrame in the common data model format.
+
+    """
+    status_translate_dict = {
+        "Owned": "Owned",
+        "Sold": "Sold",
+        "Traded": "Traded",
+        "Scrapped": "Scrapped",
+    }
+
+    return df.with_columns(pl.col("ce_status").replace(status_translate_dict))
+
+
+def translate_koenig_purchase_orders(df: pl.DataFrame) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model for Koenig.
+
+    NOTE: This function is a placeholder and does not perform any translation.
+
+    Parameters
+    ----------
+    df : pl.DataFrame
+        The Polars DataFrame to translate.
+
+    Returns
+    -------
+    pl.DataFrame
+        Translated Polars DataFrame in the common data model format.
+
+    """
+    return df
+
+
+def translate_koenig_service_requests(df: pl.DataFrame) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model for Koenig.
+
+    NOTE: This function is a placeholder and does not perform any translation.
+
+    Parameters
+    ----------
+    df : pl.DataFrame
+        The Polars DataFrame to translate.
+
+    Returns
+    -------
+    pl.DataFrame
+        Translated Polars DataFrame in the common data model format.
+
+    """
+    return df
+
+
+def translate_koenig_store(df: pl.DataFrame) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model for Koenig.
+
+    NOTE: This function is a placeholder and does not perform any translation.
+
+    Parameters
+    ----------
+    df : pl.DataFrame
+        The Polars DataFrame to translate.
+
+    Returns
+    -------
+    pl.DataFrame
+        Translated Polars DataFrame in the common data model format.
+
+    """
+    return df
+
+
+def translate_koenig_task(df: pl.DataFrame) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model for Koenig.
+
+    NOTE: This function is a placeholder and does not perform any translation.
+
+    Parameters
+    ----------
+    df : pl.DataFrame
+        The Polars DataFrame to translate.
+
+    Returns
+    -------
+    pl.DataFrame
+        Translated Polars DataFrame in the common data model format.
+
+    """
+    return df
+
+
+def translate_koenig_user(df: pl.DataFrame) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model for Koenig.
+
+    NOTE: This function is a placeholder and does not perform any translation.
+
+    Parameters
+    ----------
+    df : pl.DataFrame
+        The Polars DataFrame to translate.
+
+    Returns
+    -------
+    pl.DataFrame
+        Translated Polars DataFrame in the common data model format.
+
+    """
+    return df
