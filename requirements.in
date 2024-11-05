@@ -3,3 +3,4 @@ polars
 python-dotenv
 ruff
 pyarrow
+scikit-learn
