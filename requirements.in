@@ -1,6 +1,8 @@
 pytest
+pytest-mock
 polars
 python-dotenv
 ruff
 pyarrow
 scikit-learn
+databricks-sql-connector
