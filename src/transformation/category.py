@@ -21,8 +21,9 @@ FROM prod_mysql.silver_tractor_prod.make m1
 JOIN prod_mysql.silver_tractor_prod.make_model m2 ON m1.id = m2.make_id
 JOIN prod_mysql.silver_tractor_prod.lot_category cat ON cat.id = m2.category
 JOIN prod_mysql.silver_tractor_prod.lot_subcategory sub ON sub.id = m2.subcategory
-JOIN prod_mysql.silver_tractor_prod.lots l ON l.category_id = cat.id AND l.subcategory_id = sub.id
-WHERE m2.status = 1 
+JOIN prod_mysql.silver_tractor_prod.lots l ON l.category_id = cat.id
+                                           AND l.subcategory_id = sub.id
+WHERE m2.status = 1
 GROUP BY ALL
 ORDER BY total_units DESC"""
 
@@ -30,7 +31,10 @@ log = logging.getLogger(__name__)
 
 
 class CleanMakeModelData:
+    """Class to clean make model data and map to TZ Cat + Subcat."""
+
     def __init__(self) -> None:
+        """Initialize the CleanMakeModelData class."""
         self.make_model_data = self.get_make_model_data()
         self.aggregated_data = pl.DataFrame()
 
@@ -54,6 +58,9 @@ class CleanMakeModelData:
             The model of the equipment.
         description : str
             The description of the equipment.
+        group : str
+            The equipment group defined by the dealer. If this isn't filled out
+            it can't use the semantic check to find the best subcategory.
 
         Returns
         -------
@@ -63,7 +70,10 @@ class CleanMakeModelData:
         """
         # check for exact match in make model data
         exact_match = self._check_match(
-            make, model, group=group, use_semantic_check=True,
+            make,
+            model,
+            group=group,
+            use_semantic_check=True,
         )
         if exact_match:
             return exact_match[0]
@@ -118,7 +128,10 @@ class CleanMakeModelData:
                 group = group[0][0] if group.any() else ""
                 if len(match) > 1 and group:
                     match_dict = self._check_match(
-                        make, model, group=group, use_semantic_check=True,
+                        make,
+                        model,
+                        group=group,
+                        use_semantic_check=True,
                     )[0]
                 else:
                     match_dict = match[0]
@@ -276,7 +289,19 @@ class CleanMakeModelData:
 
     @staticmethod
     def make_synonym_list(acronym: str) -> str:
-        """Takes a make acronym and returns a full name"""
+        """Turn an acronym into a full name.
+
+        Parameters
+        ----------
+        acronym : str
+            The acronym to convert to a full name.
+
+        Returns
+        -------
+        str
+            The full name of the acronym.
+
+        """
         make_acronyms = {
             "JD": "John Deere",
             "SL": "Stihl",
