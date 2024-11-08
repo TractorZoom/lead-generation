@@ -1,5 +1,7 @@
 """Contains functions to translate raw data into a common data model."""
 
+from __future__ import annotations
+
 import json
 from pathlib import Path
 
@@ -7,9 +9,12 @@ import polars as pl
 
 
 def translate_csv_to_common_model(
-    csv_path: str, dealer: str, semantic_layer_path: str, object_type: str
+    csv_path: str,
+    dealer: str,
+    semantic_layer_path: str,
+    object_type: str,
 ) -> pl.DataFrame:
-    """Translate a raw CSV for a given dealer into a common data model using semantic layer.
+    """Translate a raw CSV for a dealer into a common data model using semantic layer.
 
     Parameters
     ----------
@@ -19,6 +24,8 @@ def translate_csv_to_common_model(
         The dealer name used to identify field mappings in the semantic layer.
     semantic_layer_path : str
         The path to the semantic layer JSON file.
+    object_type : str
+        The object type to translate (e.g., equipment, customer, etc.)
 
     Returns
     -------
@@ -34,23 +41,11 @@ def translate_csv_to_common_model(
         semantic_layer = json.load(f)
     semantic_layer = semantic_layer[object_type]
 
-    # Create a dictionary to store the mapping of raw columns to common model columns
-    column_mapping = {}
-    column_types = {}
-    for field_name, field_data in semantic_layer.items():
-        for key_mapping in field_data["keys"]:
-            if key_mapping["org"] == dealer:
-                raw_column_name = key_mapping["api_name"]
-                column_mapping[raw_column_name] = field_name
-                if "type" in field_data:
-                    column_types[field_name] = field_data["type"]
-
-    # Check for columns in the raw CSV that can be translated using the semantic layer
+    column_mapping, column_types = create_column_mapping(semantic_layer, dealer)
 
     common_model_columns = [
         (col, column_mapping[col]) for col in df_init.columns if col in column_mapping
     ]
-
     # If no columns were matched, raise an error
     if not common_model_columns:
         error_message = (
@@ -61,47 +56,89 @@ def translate_csv_to_common_model(
     # Rename the columns in the DataFrame according to the semantic layer mapping
     df_translate = df_init.rename(dict(common_model_columns))
 
+    return translate_columns(df_translate, column_types)
+
+
+def translate_columns(df_translate: pl.DataFrame, column_types: dict) -> pl.DataFrame:
+    """Translate the columns of a Polars DF to the common data model.
+
+    Parameters
+    ----------
+    df_translate : pl.DataFrame
+        The Polars DataFrame to translate.
+    column_types : dict
+        A dictionary mapping column names to their data types.
+
+    Returns
+    -------
+    pl.DataFrame
+
+    """
     for col, data_type in column_types.items():
         if data_type == "date":
             df_translate = df_translate.with_columns(
                 pl.col(col)
                 .replace("", None)
-                .str.to_date(format="%Y-%m-%d", strict=False)
+                .str.to_date(format="%Y-%m-%d", strict=False),
             )
         elif data_type == "datetime":
             df_translate = df_translate.with_columns(
                 pl.col(
                     col.replace("", None).str.to_date(
-                        format="%Y-%m-%d %H:%M:%S", strict=False
-                    )
-                )
+                        format="%Y-%m-%d %H:%M:%S",
+                        strict=False,
+                    ),
+                ),
             )
         elif data_type == "float":
-            if df_translate[col].dtype == pl.Float64:
-                continue
             df_translate = df_translate.with_columns(
-                pl.col(col).replace("", None).cast(pl.Float64)
+                pl.col(col).cast(pl.Utf8).replace("", None).cast(pl.Float64),
             )
         elif data_type == "integer":
-            if df_translate[col].dtype == pl.Int64:
-                continue
-            else:
-                df_translate = df_translate.with_columns(
-                    pl.col(col).replace("", None).cast(pl.Int64)
-                )
+            df_translate = df_translate.with_columns(
+                pl.col(col).cast(pl.Utf8).replace("", None).cast(pl.Int64),
+            )
         elif data_type == "boolean":
             df_translate = df_translate.with_columns(
-                pl.col(col).replace("", None).cast(pl.Boolean)
+                pl.col(col).replace("", None).cast(pl.Boolean),
             )
         elif data_type == "string":
-            if df_translate[col].dtype != pl.Utf8:
-                df_translate = df_translate.with_columns(pl.col(col).cast(pl.Utf8))
-
-            df_translate = df_translate.with_columns(pl.col(col).replace("", None))
+            df_translate = df_translate.with_columns(
+                pl.col(col).cast(pl.Utf8).replace("", None),
+            )
         else:
             continue
-
     return df_translate
+
+
+def create_column_mapping(semantic_layer: dict, dealer: str) -> tuple[dict, dict]:
+    """Create a mapping of raw columns to common model columns using the semantic layer.
+
+    Parameters
+    ----------
+    semantic_layer : dict
+        The semantic layer dictionary.
+    dealer : str
+        The dealer name used to identify field mappings in the semantic layer.
+
+    Returns
+    -------
+    dict
+        A dictionary mapping raw columns to common model columns.
+
+
+    """
+    # Create a dictionary to store the mapping of raw columns to common model columns
+    column_mapping = {}
+    column_types = {}
+    for field_name, field_data in semantic_layer.items():
+        for key_mapping in field_data["keys"]:
+            if key_mapping["org"] == dealer:
+                raw_column_name = key_mapping["api_name"]
+                column_mapping[raw_column_name] = field_name
+                if "type" in field_data:
+                    column_types[field_name] = field_data["type"]
+    return column_mapping, column_types
 
 
 def translate_koenig_account_columns(df: pl.DataFrame) -> pl.DataFrame:
