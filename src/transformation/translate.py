@@ -56,6 +56,12 @@ def translate_csv_to_common_model(
     # Rename the columns in the DataFrame according to the semantic layer mapping
     df_translate = df_init.rename(dict(common_model_columns))
 
+    # Drop columns not in semantic lyayer
+    columns_to_drop = [
+        col for col in df_translate.columns if col not in column_mapping.values()
+    ]
+
+    df_translate = df_translate.drop(columns_to_drop)
     return translate_columns(df_translate, column_types)
 
 
@@ -77,34 +83,51 @@ def translate_columns(df_translate: pl.DataFrame, column_types: dict) -> pl.Data
     for col, data_type in column_types.items():
         if data_type == "date":
             df_translate = df_translate.with_columns(
-                pl.col(col)
-                .replace("", None)
-                .str.to_date(format="%Y-%m-%d", strict=False),
+                pl.when(pl.col(col).cast(pl.Utf8) == "")
+                .then(None)
+                .otherwise(pl.col(col))
+                .str.to_date(format="%Y-%m-%d")
+                .alias(col),
             )
         elif data_type == "datetime":
             df_translate = df_translate.with_columns(
-                pl.col(
-                    col.replace("", None).str.to_date(
-                        format="%Y-%m-%d %H:%M:%S",
-                        strict=False,
-                    ),
-                ),
+                pl.when(pl.col(col).cast(pl.Utf8) == "")
+                .then(None)
+                .otherwise(pl.col(col))
+                .str.to_datetime(format="%Y-%m-%dT%H:%M:%S%.3f%z", strict=False)
+                .alias(col),
             )
         elif data_type == "float":
             df_translate = df_translate.with_columns(
-                pl.col(col).cast(pl.Utf8).replace("", None).cast(pl.Float64),
+                pl.when(pl.col(col).cast(pl.Utf8) == "")
+                .then(None)
+                .otherwise(pl.col(col))
+                .cast(pl.Float64)
+                .alias(col),
             )
         elif data_type == "integer":
             df_translate = df_translate.with_columns(
-                pl.col(col).cast(pl.Utf8).replace("", None).cast(pl.Int64),
+                pl.when(pl.col(col).cast(pl.Utf8) == "")
+                .then(None)
+                .otherwise(pl.col(col))
+                .cast(pl.Int64)
+                .alias(col),
             )
         elif data_type == "boolean":
             df_translate = df_translate.with_columns(
-                pl.col(col).replace("", None).cast(pl.Boolean),
+                pl.when(pl.col(col).cast(pl.Utf8) == "")
+                .then(None)
+                .otherwise(pl.col(col))
+                .cast(pl.Boolean)
+                .alias(col),
             )
         elif data_type == "string":
             df_translate = df_translate.with_columns(
-                pl.col(col).cast(pl.Utf8).replace("", None),
+                pl.when(pl.col(col).cast(pl.Utf8) == "")
+                .then(None)
+                .otherwise(pl.col(col))
+                .cast(pl.Utf8)
+                .alias(col),
             )
         else:
             continue
