@@ -6,3 +6,4 @@ ruff
 pyarrow
 scikit-learn
 databricks-sql-connector
+sentence-transformers
