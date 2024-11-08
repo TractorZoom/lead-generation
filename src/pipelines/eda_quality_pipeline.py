@@ -152,7 +152,9 @@ def run_mapping_quality(
 
         if idx % 5000 == 0:
             log.info(
-                "Matched Cats: %d, Matched Subcats: %d", matched_cats, matched_subcats,
+                "Matched Cats: %d, Matched Subcats: %d",
+                matched_cats,
+                matched_subcats,
             )
             log.info("Total of %d rows processed of %d", idx, pl_df.height)
 
@@ -188,7 +190,10 @@ def parse_inputs() -> argparse.Namespace:
 
 
 def get_salesforce_object_and_field(
-    semantic_layer: dict, dealer: str, obj: str, field_name: str,
+    semantic_layer: dict,
+    dealer: str,
+    obj: str,
+    field_name: str,
 ) -> tuple[str, str]:
     """Get the Salesforce object and field name from the semantic layer."""
     data = semantic_layer[obj][field_name]
@@ -200,7 +205,10 @@ def get_salesforce_object_and_field(
 
 
 def eda_polars(
-    df: pl.DataFrame, semantic_layer: dict, dealer: str, object_name: str,
+    df: pl.DataFrame,
+    semantic_layer: dict,
+    dealer: str,
+    object_name: str,
 ) -> pl.DataFrame:
     """Perform exploratory data analysis on the input DataFrame."""
     results = []
