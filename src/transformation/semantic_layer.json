@@ -183,21 +183,21 @@
                 {
                     "org": "akrs",
                     "object": "Account",
-                    "api_name": "ParentId",
+                    "api_name": "OwnerId",
                     "foreign_key_object": "user",
                     "foreign_key_field": "user_id"
                 },
                 {
                     "org": "ave-plp",
                     "object": "Account",
-                    "api_name": "ParentId",
+                    "api_name": "OwnerId",
                     "foreign_key_object": "user",
                     "foreign_key_field": "user_id"
                 },
                 {
                     "org": "greenway",
                     "object": "Account",
-                    "api_name": "ParentId",
+                    "api_name": "OwnerId",
                     "foreign_key_object": "user",
                     "foreign_key_field": "user_id"
                 }
@@ -1226,41 +1226,6 @@
                 }
             ]
         },
-        "ce_category": {
-            "primary_key": false,
-            "foreign_key": false,
-            "type": "string",
-            "keys": [
-                {
-                    "org": "koenig",
-                    "object": "Anvil__Customer_Equipment__c",
-                    "api_name": "Anvil__Group__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
-                },
-                {
-                    "org": "akrs",
-                    "object": "Anvil__Customer_Equipment__c",
-                    "api_name": "Anvil__Group__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
-                },
-                {
-                    "org": "ave-plp",
-                    "object": "Anvil__Customer_Equipment__c",
-                    "api_name": "Anvil__Group__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
-                },
-                {
-                    "org": "greenway",
-                    "object": "Anvil__Customer_Equipment__c",
-                    "api_name": "Anvil__Group__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
-                }
-            ]
-        },
         "ce_hours": {
             "primary_key": false,
             "foreign_key": false,
@@ -1291,6 +1256,41 @@
                     "org": "greenway",
                     "object": "Anvil__Customer_Equipment__c",
                     "api_name": "Anvil__Hour_Meter_Reading__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "ce_group": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Group__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Group__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Group__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__Customer_Equipment__c",
+                    "api_name": "Anvil__Group__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
                 }
@@ -1631,6 +1631,20 @@
                     "api_name": "Anvil__Description__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Description_V2__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Description_V2__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
                 }
             ]
         },
@@ -1687,6 +1701,20 @@
                     "api_name": "Anvil__Group__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Group__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__Marketshare_Product_Name__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
                 }
             ]
         },
@@ -1711,6 +1739,13 @@
                 },
                 {
                     "org": "ave-plp",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__ModelYear__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
                     "object": "Anvil__DealerStockUnit__c",
                     "api_name": "Anvil__ModelYear__c",
                     "foreign_key_object": null,
@@ -1874,6 +1909,20 @@
                     "org": "akrs",
                     "object": "Anvil__DealerStockUnit__c",
                     "api_name": "Anvil__Sub_Group__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__SubCat__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__DealerStockUnit__c",
+                    "api_name": "Anvil__SubCat__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
                 }
@@ -3599,13 +3648,6 @@
                     "api_name": "Anvil__Overdue__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
-                },
-                {
-                    "org": "greenway",
-                    "object": "Task",
-                    "api_name": "Anvil__Overdue__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
                 }
             ]
         },
@@ -3632,13 +3674,6 @@
                     "org": "ave-plp",
                     "object": "Task",
                     "api_name": "DB_Activity_Type__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
-                },
-                {
-                    "org": "greenway",
-                    "object": "Task",
-                    "api_name": "Anvil__Activity_Type__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
                 }
@@ -3940,13 +3975,6 @@
                 },
                 {
                     "org": "ave-plp",
-                    "object": "User",
-                    "api_name": "Anvil__PrimaryStoreLocationID__c",
-                    "foreign_key_object": null,
-                    "foreign_key_field": null
-                },
-                {
-                    "org": "greenway",
                     "object": "User",
                     "api_name": "Anvil__PrimaryStoreLocationID__c",
                     "foreign_key_object": null,
@@ -4513,7 +4541,7 @@
                 {
                     "org": "greenway",
                     "object": "Anvil__PurchaseOrder__c",
-                    "api_name": "Anvil__poStatus__c",
+                    "api_name": "Anvil__WorkflowStatus__c",
                     "foreign_key_object": null,
                     "foreign_key_field": null
                 }
