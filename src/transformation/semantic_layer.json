@@ -2148,7 +2148,7 @@
         "dsu_purchase_date": {
             "primary_key": false,
             "foreign_key": false,
-            "type": "date",
+            "type": "datetime",
             "keys": [
                 {
                     "org": "koenig",
@@ -3169,7 +3169,7 @@
         "service_open_date": {
             "primary_key": false,
             "foreign_key": false,
-            "type": "date",
+            "type": "datetime",
             "keys": [
                 {
                     "org": "akrs",
@@ -3197,7 +3197,7 @@
         "service_close_date": {
             "primary_key": false,
             "foreign_key": false,
-            "type": "date",
+            "type": "datetime",
             "keys": [
                 {
                     "org": "koenig",
@@ -3591,7 +3591,7 @@
         "task_activity_date": {
             "primary_key": false,
             "foreign_key": false,
-            "type": "datetime",
+            "type": "date",
             "keys": [
                 {
                     "org": "koenig",
