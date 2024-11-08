@@ -33,7 +33,7 @@ indent-width = 4
 
 [lint]
 select = ["ALL"]
-ignore = ["TRY003"]
+ignore = ["TRY003", "D104"]
 
 [format]
 # Like Black, use double quotes for strings.
