@@ -7,7 +7,7 @@ SELECT Id
      , Anvil__SerialNumber__c
      , Anvil__EquipmentType__c
      , Anvil__SubCat__c
-     , Anvil__Marketshare_Product_Family__c
+     , Anvil__Marketshare_Product_Name__c
      , Anvil__Hours_or_Units__c
      , Anvil__Store__c
      , Anvil__OrderDate__c
@@ -21,4 +21,5 @@ SELECT Id
      , Anvil__SalesDate__c
      , Anvil__Sold_By__c
      , Anvil__Account__c
+     ,Anvil__Description_V2__c
 FROM Anvil__DealerStockUnit__c  
