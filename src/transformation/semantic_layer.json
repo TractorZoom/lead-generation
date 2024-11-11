@@ -1053,7 +1053,7 @@
         "ce_model_year": {
             "primary_key": false,
             "foreign_key": false,
-            "type": "string",
+            "type": "integer",
             "keys": [
                 {
                     "org": "koenig",
