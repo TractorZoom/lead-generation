@@ -262,12 +262,16 @@ def eda_polars(
                 most_common_date = most_common_date.strftime("%Y-%m-%d %H:%M:%S")
             else:
                 most_common_value_count = df[col].filter(df[col].is_null()).shape[0]
+            earliest_date = df[col].min()
+            if earliest_date:
+                earliest_date = earliest_date.strftime("%Y-%m-%d %H:%M:%S")  # type: ignore
 
             col_data.update(
                 {
                     "most_common_non_null_date": most_common_date,
                     "count_of_most_common_date": most_common_value_count,
                     "unique_dates": df[col].n_unique(),
+                    "earliest_date": earliest_date,
                 },
             )
 
