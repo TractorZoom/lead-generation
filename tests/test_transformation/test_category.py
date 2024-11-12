@@ -35,6 +35,8 @@ def sample_make_model_data():
                 "model": "X300",
                 "category": "Tractor",
                 "subcategory": "Lawn",
+                "best_fit_reason": "Exact Match",
+                "best_fit_score": 1,
             },
         ),
         (
@@ -45,6 +47,8 @@ def sample_make_model_data():
                 "model": "MS180",
                 "category": "Chainsaw",
                 "subcategory": "Handheld",
+                "best_fit_reason": "Exact Match",
+                "best_fit_score": 1,
             },
         ),
         (
@@ -55,12 +59,18 @@ def sample_make_model_data():
                 "model": "X300",
                 "category": "Unknown",
                 "subcategory": "Unknown",
+                "best_fit_reason": "No Match",
+                "best_fit_score": -1,
             },
         ),
     ],
 )
 def test_01_clean_make_model_data(
-    clean_make_model_data, sample_make_model_data, make, model, expected,
+    clean_make_model_data,
+    sample_make_model_data,
+    make,
+    model,
+    expected,
 ):
     # Assign mock data to the instance
     clean_make_model_data.make_model_data = sample_make_model_data
@@ -92,6 +102,8 @@ def test_02_create_aggregated_data(clean_make_model_data):
                 "model": "X300",
                 "category": "Tractor",
                 "subcategory": "Lawn",
+                "best_fit_reason": "Exact Match",
+                "best_fit_score": 1,
             },
         ),
         (
@@ -103,15 +115,23 @@ def test_02_create_aggregated_data(clean_make_model_data):
                 "model": "MS180",
                 "category": "Chainsaw",
                 "subcategory": "Handheld",
+                "best_fit_reason": "Exact Match",
+                "best_fit_score": 1,
             },
         ),
     ],
 )
 def test_03_check_aggregated_data(
-    clean_make_model_data, sample_make_model_data, make, model, group, expected,
+    clean_make_model_data,
+    sample_make_model_data,
+    make,
+    model,
+    group,
+    expected,
 ):
     clean_make_model_data.aggregated_data = sample_make_model_data
     result = clean_make_model_data.check_aggregated_data(make, model, group)
+
     assert result == expected
 
 
@@ -166,6 +186,8 @@ def test_06_get_make_model_data(mocker):
                     "model": "X300",
                     "category": "Tractor",
                     "subcategory": "Lawn",
+                    "best_fit_reason": "Exact Match",
+                    "best_fit_score": 1,
                 },
             ],
         ),
@@ -180,6 +202,8 @@ def test_06_get_make_model_data(mocker):
                     "model": "X300",
                     "category": "Unknown",
                     "subcategory": "Unknown",
+                    "best_fit_reason": "No Match",
+                    "best_fit_score": -1,
                 },
             ],
         ),
@@ -196,6 +220,9 @@ def test_07_check_match(
 ):
     clean_make_model_data.make_model_data = sample_make_model_data
     result = clean_make_model_data._check_match(
-        make, model, group=group, use_semantic_check=use_semantic_check,
+        make,
+        model,
+        group=group,
+        use_semantic_check=use_semantic_check,
     )
     assert result == expected
