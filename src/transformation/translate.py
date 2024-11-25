@@ -191,7 +191,7 @@ def translate_koenig_account_columns(df: pl.DataFrame) -> pl.DataFrame:
     business_translate_dict = {
         "S": "A - Strategic Account",
         "K": "B - Key Account",
-        "R": "R - Relationship Account",
+        "R": "C - Relationship Account",
         "T": "D - Transaction Account",
         "ST": "A - Turf Strategic Account",
         "KT": "K - Turf Key Account",
