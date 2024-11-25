@@ -4,4 +4,5 @@ SELECT Id
      , Anvil__Region_Manager__c
      , Anvil__Sales_Manager__c
      , Title
+     , IsActive     
 FROM User 
