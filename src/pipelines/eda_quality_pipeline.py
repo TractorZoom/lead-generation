@@ -129,41 +129,31 @@ def run_mapping_quality(
     None
 
     """
-    matched_cats = 0
-    matched_subcats = 0
+    matched = 0
     idx = 1
     for row in pl_df.iter_rows(named=True):
-        make = row[make_col].lower() if row[make_col] else ""
-        model = row[model_col].lower() if row[model_col] else ""
-        group = row[group_col].lower() if row[group_col] else ""
+        make = row[make_col] if row[make_col] else ""
+        model = row[model_col] if row[model_col] else ""
+        group = row[group_col] if row[group_col] else ""
         if make and model:
-            with suppress_stdout():
-                result = clean_make_model.clean_make_model_data(
-                    make,
-                    model,
-                    group=group,
-                )
-            if result["category"] != "Unknown":
-                matched_cats += 1
-            if result["subcategory"] != "Unknown":
-                matched_subcats += 1
+            result = clean_make_model.clean_make_model_data(
+                make,
+                model,
+                group=group,
+            )
+            if result["best_fit_score"] > 0:
+                matched += 1
+
         else:
             log.warning("Row %d has missing make or model", idx)
 
         if idx % 5000 == 0:
-            log.info(
-                "Matched Cats: %d, Matched Subcats: %d",
-                matched_cats,
-                matched_subcats,
-            )
+            log.info("Matched %d rows of %d", matched, idx)
             log.info("Total of %d rows processed of %d", idx, pl_df.height)
 
         idx += 1
-    cat_match_rate = matched_cats / pl_df.height
-    subcat_match_rate = matched_subcats / pl_df.height
-
-    log.info("Category match rate: %f", cat_match_rate)
-    log.info("Subcategory match rate: %f", subcat_match_rate)
+    match_rate = matched / pl_df.height
+    log.info("Make/model match rate: %f", match_rate)
 
 
 def parse_inputs() -> argparse.Namespace:
