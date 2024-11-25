@@ -182,9 +182,13 @@ class CleanMakeModelData:
         best_subcat = ""
         best_fit_reason = ""
         scores = []
-        group_embedding = SENTENCE_MODEL.encode(group, convert_to_tensor=True)
+        group_embedding = SENTENCE_MODEL.encode(
+            group, convert_to_tensor=True, show_progress_bar=False
+        )
         for subcat in subcats:
-            embedding = SENTENCE_MODEL.encode(subcat, convert_to_tensor=True)
+            embedding = SENTENCE_MODEL.encode(
+                subcat, convert_to_tensor=True, show_progress_bar=False
+            )
             sim_score = util.pytorch_cos_sim(group_embedding, embedding)
             scores.append(sim_score.item())
             if sim_score > best_score:
@@ -245,7 +249,7 @@ class CleanMakeModelData:
             .agg(pl.count("category").alias("count"))
             .sort("count", descending=True)
             .head(1)
-        )["category"][0]
+        )["category"]
         group_subcategory = (
             self.aggregated_data.filter(
                 pl.col("group") == group,
@@ -255,13 +259,23 @@ class CleanMakeModelData:
             .agg(pl.count("subcategory").alias("count"))
             .sort("count", descending=True)
             .head(1)
-        )["subcategory"][0]
+        )["subcategory"]
+
+        if not group_category.is_empty() and not group_subcategory.is_empty():
+            return {
+                "make": make,
+                "model": model,
+                "category": group_category[0],
+                "subcategory": group_subcategory[0],
+                "best_fit_reason": "No Match - Estimate Cat/Subcat",
+                "best_fit_score": -1,
+            }
         return {
             "make": make,
             "model": model,
-            "category": group_category,
-            "subcategory": group_subcategory,
-            "best_fit_reason": "No Match - Estimate Cat/Subcat",
+            "category": "Unknown",
+            "subcategory": "Unknown",
+            "best_fit_reason": "No Match",
             "best_fit_score": -1,
         }
 
@@ -307,7 +321,7 @@ class CleanMakeModelData:
                 .agg(pl.count("category").alias("count"))
                 .sort("count", descending=True)
                 .head(1)
-            )["category"][0]
+            )["category"]
             group_subcategory = (
                 self.aggregated_data.filter(
                     pl.col("group") == group,
@@ -316,16 +330,28 @@ class CleanMakeModelData:
                 .agg(pl.count("subcategory").alias("count"))
                 .sort("count", descending=True)
                 .head(1)
-            )["subcategory"][0]
+            )["subcategory"]
+
         else:
-            group_category = "Unknown"
-            group_subcategory = "Unknown"
+            # create empty series
+            group_category = pl.Series()
+            group_subcategory = pl.Series()
+
+        if not group_category.is_empty() and not group_subcategory.is_empty():
+            return {
+                "make": make,
+                "model": model,
+                "category": group_category[0],
+                "subcategory": group_subcategory[0],
+                "best_fit_reason": "Aggregated Most Likely",
+                "best_fit_score": -1,
+            }
         return {
             "make": make,
             "model": model,
-            "category": group_category,
-            "subcategory": group_subcategory,
-            "best_fit_reason": "Aggregated Most Likely",
+            "category": "Unknown",
+            "subcategory": "Unknown",
+            "best_fit_reason": "No Match",
             "best_fit_score": -1,
         }
 
