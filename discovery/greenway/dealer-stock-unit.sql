@@ -7,6 +7,7 @@ SELECT Id
      , Anvil__SerialNumber__c
      , Anvil__EquipmentType__c
      , Anvil__SubCat__c
+     , Anvil__Variant__c
      , Anvil__Marketshare_Product_Name__c
      , Anvil__Hours_or_Units__c
      , Anvil__Store__c

@@ -9,6 +9,7 @@ SELECT Id
      , Anvil__SerialNumber__c
      , Anvil__EquipmentType__c
      , Anvil__Sub_Group__c
+     , Anvil__Variant__c
      , Anvil__Hours_or_Units__c
      , Anvil__Seperator_Hours__c
      , Check_in_Date__c
