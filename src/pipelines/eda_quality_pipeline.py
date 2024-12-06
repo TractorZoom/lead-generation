@@ -19,6 +19,66 @@ from src.transformation.translate import translate_csv_to_common_model
 log = logging.getLogger(__name__)
 
 
+MAPPING_OBJECTS = {
+    "koenig": [
+        {
+            "name": "dealer_stock_unit",
+            "make_field": "dsu_make",
+            "model_field": "dsu_model",
+            "group_field": "dsu_group",
+        },
+        {
+            "name": "customer_equipment",
+            "make_field": "ce_make",
+            "model_field": "ce_model",
+            "group_field": "ce_group",
+        },
+    ],
+    "greenway": [
+        {
+            "name": "dealer_stock_unit",
+            "make_field": "dsu_make",
+            "model_field": "dsu_model",
+            "group_field": "dsu_variant",
+        },
+        {
+            "name": "customer_equipment",
+            "make_field": "ce_make",
+            "model_field": "ce_model",
+            "group_field": "ce_group",
+        },
+    ],
+    "ave-plp": [
+        {
+            "name": "dealer_stock_unit",
+            "make_field": "dsu_make",
+            "model_field": "dsu_model",
+            "group_field": "dsu_variant",
+        },
+        {
+            "name": "customer_equipment",
+            "make_field": "ce_make",
+            "model_field": "ce_model",
+            "group_field": "ce_group",
+        },
+    ],
+    "akrs": [
+        {
+            "name": "dealer_stock_unit",
+            "make_field": "dsu_make",
+            "model_field": "dsu_model",
+            "group_field": "dsu_variant",
+        },
+        {
+            "name": "customer_equipment",
+            "make_field": "ce_make",
+            "model_field": "ce_model",
+            "group_field": "ce_group",
+        },
+    ],
+}
+
+
 @contextmanager
 def suppress_stdout():  # noqa: ANN201
     """Suppress stdout."""
@@ -39,20 +99,6 @@ def main() -> None:
 
     dealership_name = args.dealership_name
     mapping_flag = args.mapping_check
-    mapping_objects = [
-        {
-            "name": "dealer_stock_unit",
-            "make_field": "dsu_make",
-            "model_field": "dsu_model",
-            "group_field": "dsu_group",
-        },
-        {
-            "name": "customer_equipment",
-            "make_field": "ce_make",
-            "model_field": "ce_model",
-            "group_field": "ce_group",
-        },
-    ]
 
     object_files = [
         file
@@ -81,9 +127,10 @@ def main() -> None:
 
     if mapping_flag == "y":
         log.info("Starting mapping quality check")
-        for obj in mapping_objects:
+        objects_to_map = MAPPING_OBJECTS[dealership_name]
+        clean_make_model_data = CleanMakeModelData()
+        for obj in objects_to_map:
             object_pl = objects[obj["name"]]
-            clean_make_model_data = CleanMakeModelData()
             if clean_make_model_data.aggregated_data.shape[0] == 0:
                 log.info("No aggregated dataset found. This may take a minute.")
                 with suppress_stdout():
@@ -99,6 +146,7 @@ def main() -> None:
                 make_col=obj["make_field"],
                 model_col=obj["model_field"],
                 group_col=obj["group_field"],
+                file_name=obj["name"],
             )
 
 
@@ -108,6 +156,7 @@ def run_mapping_quality(
     make_col: str,
     model_col: str,
     group_col: str,
+    file_name: str,
 ) -> None:
     """Run quality check of being able to match equipment make/model to TZ data.
 
@@ -124,6 +173,9 @@ def run_mapping_quality(
     group_col : str
         The column name for the group.
 
+    file_name : str
+        The name of the file to save the results to.
+
     Returns
     -------
     None
@@ -131,7 +183,9 @@ def run_mapping_quality(
     """
     matched = 0
     idx = 1
-    for row in pl_df.iter_rows(named=True):
+    unique_pl_df = pl_df.select([make_col, model_col, group_col]).unique()
+    results = []
+    for row in unique_pl_df.iter_rows(named=True):
         make = row[make_col] if row[make_col] else ""
         model = row[model_col] if row[model_col] else ""
         group = row[group_col] if row[group_col] else ""
@@ -143,17 +197,36 @@ def run_mapping_quality(
             )
             if result["best_fit_score"] > 0:
                 matched += 1
-
+            result["original_make"] = make
+            result["original_model"] = model
+            result["original_group"] = group
+            results.append(result)
         else:
             log.warning("Row %d has missing make or model", idx)
 
         if idx % 5000 == 0:
             log.info("Matched %d rows of %d", matched, idx)
-            log.info("Total of %d rows processed of %d", idx, pl_df.height)
-
+            log.info("Total of %d rows processed of %d", idx, unique_pl_df.height)
         idx += 1
-    match_rate = matched / pl_df.height
-    log.info("Make/model match rate: %f", match_rate)
+
+    match_rate = matched / unique_pl_df.height
+    log.info("Make/model match rate for %s: %f", file_name, match_rate)
+    results_df = pl.DataFrame(results)
+
+    # calculate the number of records that have a matching make/model
+    full_df = pl_df.join(
+        results_df,
+        left_on=[make_col, model_col, group_col],
+        right_on=["original_make", "original_model", "original_group"],
+        how="left",
+    )
+    total_matches = full_df.filter(full_df["best_fit_reason"] != "No Match").height
+    total_records = full_df.height
+    match_rate = total_matches / total_records
+    log.info("Overall match rate for %s : %f", file_name, match_rate)
+    results_df.to_pandas().to_csv(
+        f"data/{file_name}_mapping_quality_results.csv", index=False
+    )
 
 
 def parse_inputs() -> argparse.Namespace:
