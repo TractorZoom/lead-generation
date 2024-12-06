@@ -77,7 +77,7 @@ class CleanMakeModelData:
             group=group,
             use_semantic_check=True,
         )
-
+        synonym_make = None
         if exact_match and exact_match[0]["best_fit_reason"] == "Exact Match":
             return exact_match[0]
         # check for acronym in make
@@ -113,6 +113,16 @@ class CleanMakeModelData:
                 "Semantic"
             ):
                 return semantic_check[0]
+
+        check_no_special_chars = self.check_with_no_special_characters(
+            make,
+            model,
+            group,
+        )
+        if check_no_special_chars and (
+            check_no_special_chars["best_fit_reason"] != "No Match"
+        ):
+            return check_no_special_chars
 
         # check for best guess based on group
         if group:
@@ -488,3 +498,46 @@ class CleanMakeModelData:
         }
 
         return make_acronyms.get(acronym, "Unknown")
+
+    def check_with_no_special_characters(
+        self, make: str, model: str, group: str = ""
+    ) -> dict:
+        """Check for a match with no special characters in the make.
+
+        Parameters
+        ----------
+        make : str
+            The make of the equipment.
+        model : str
+            The model of the equipment.
+        group : str
+            The group of the equipment.
+
+        Returns
+        -------
+        dict
+            The cleaned make, model, category, and subcategory data
+        """
+        # check for exact match by removing special characters
+        make_no_special_chars = "".join(e for e in make if e.isalnum())
+        exact_match = self._check_match(
+            make_no_special_chars,
+            model,
+            group=group,
+            use_semantic_check=True,
+        )
+        if exact_match and exact_match[0]["best_fit_reason"] == "Exact Match":
+            return exact_match[0]
+        # check for semantic match without special characters
+        if group:
+            semantic_check = self._check_match(
+                make_no_special_chars,
+                model,
+                group=group,
+                use_semantic_check=True,
+            )
+            if semantic_check and semantic_check[0]["best_fit_reason"].startswith(
+                "Semantic"
+            ):
+                return semantic_check[0]
+        return exact_match[0]
