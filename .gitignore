@@ -125,3 +125,5 @@ dmypy.json
 
 # Remove data files
 data/*
+*.zip
+*.DS_Store
