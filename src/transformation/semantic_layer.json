@@ -4819,7 +4819,77 @@
                     "foreign_key_field": null
                 }
             ]
-        } 
+        },
+        "po_purchase_order_amount": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "double",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__POAmount__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__POAmount__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__POAmount__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__POAmount__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "po_owner_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Owner_Id__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Owner_Id__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Owner_Id__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__PurchaseOrder__c",
+                    "api_name": "Anvil__Owner_Id__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+            ]
+        }
     },
     "sales_history": {
         "sales_history_id" : {
@@ -5104,5 +5174,392 @@
                 ]
             }
 
+    },
+    "quote" : {
+        "quote_id": {
+            "primary_key": true,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Id",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "quote_quote_id": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__QuoteID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__QuoteID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__QuoteID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__QuoteID__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "quote_customer_account_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Customer__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Customer__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Customer__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Customer__c",
+                    "foreign_key_object": "account",
+                    "foreign_key_field": "account_id"
+                }
+            ]
+        },
+        "quote_status" : {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Status__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Status__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Status__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Status__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "quote_created_date" : {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "datetime",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "CreatedDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "CreatedDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "CreatedDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "CreatedDate",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "quote_equipment_stock_numbers" : {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Equipment_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                }
+            ]
+        },
+        "quote_trade_in_stock_numbers" : {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Trade_In_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Trade_In_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Trade_In_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Trade_In_Stock_Numbers__c",
+                    "foreign_key_object": "dealer_stock_unit",
+                    "foreign_key_field": "dealer_stock_number"
+                }
+            ]
+        },
+        "quote_sales_manager_id" : {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Sales_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Sales_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Sales_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__Sales_Manager__c",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+            ]
+        },
+        "quote_owner_id": {
+            "primary_key": false,
+            "foreign_key": true,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "OwnerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "OwnerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "OwnerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "OwnerId",
+                    "foreign_key_object": "user",
+                    "foreign_key_field": "user_id"
+                }
+            ]
+        },
+        "quote_po_number": {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poNumber__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        },
+        "quote_po_status" : {
+            "primary_key": false,
+            "foreign_key": false,
+            "type": "string",
+            "keys": [
+                {
+                    "org": "koenig",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "akrs",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "ave-plp",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                },
+                {
+                    "org": "greenway",
+                    "object": "Anvil__JDQuote__c",
+                    "api_name": "Anvil__poStatus__c",
+                    "foreign_key_object": null,
+                    "foreign_key_field": null
+                }
+            ]
+        }
     }
 }
