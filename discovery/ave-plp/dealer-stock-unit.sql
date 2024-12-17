@@ -23,4 +23,7 @@ SELECT Id
      , Anvil__Sold_By__c
      , Anvil__Account__c
      , Anvil__Description_V2__c
+     , Anvil__Year_Manufactured__c
+     , Anvil__Traded_In_For__c
+     , Anvil__Previous_Owner__c
 FROM Anvil__DealerStockUnit__c  

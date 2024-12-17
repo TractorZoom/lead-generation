@@ -7,4 +7,8 @@ SELECT Id
      , Anvil__JDQuote__c
      , Anvil__marketUse__c
      , Anvil__transactionType__c
+     , Anvil__Owner_Id__c
+     , Anvil__Invoicing_Date__c
+     , CreatedDate
+     , Anvil__POAmount__c
 FROM Anvil__PurchaseOrder__c
