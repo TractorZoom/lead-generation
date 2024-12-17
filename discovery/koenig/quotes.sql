@@ -1,0 +1,12 @@
+SELECT Id 
+     , Anvil__QuoteID__c
+     , Anvil__Status__c
+     , CreatedDate
+     , Anvil__Equipment_Stock_Numbers__c
+     , Anvil__Trade_In_Stock_Numbers__c
+     , OwnerId
+     , Anvil__Sales_Manager__c
+     , Anvil__poNumber__c
+     , Anvil__poStatus__c
+     , Anvil__Customer__c
+FROM Anvil__JDQuote__c
